@@ -5,11 +5,13 @@
 [merge]
 	tool = opendiff
 [alias]
-	plog = log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
-	co = checkout
-	sup = submodule update
-	supr = submodule update --init --recursive
-	cp = cherry-pick
+        plog = log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
+        co = checkout
+        sup = submodule update
+        supr = submodule update --init --recursive
+        cp = cherry-pick
+##        branch-hof = for-each-ref --shell --format="printf '\''%%30s %%40s %%25s\n'\'' %(authorname) %(refname:short) %(committerdate:relative)" --sort=committerdate refs/remotes/origin
+        fa = fetch --all -p
 
 [filter "lfs"]
 	clean = git-lfs clean %f
