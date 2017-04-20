@@ -8,7 +8,7 @@
 	plog = log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
 	co = checkout
 	sup = submodule update
-	supr = submodule update --recursive
+	supr = submodule update --init --recursive
 	cp = cherry-pick
 
 [filter "lfs"]
