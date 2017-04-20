@@ -33,6 +33,24 @@ function gpou {
 function gpf {
   git push --force-with-lease origin $(git rev-parse --abbrev-ref HEAD)
 }
+# use a command in all repos
+function all_repos {
+  CURRENT_DIR=$(cd "$(dirname "$0")"; pwd)
+  REPOS=(
+    ~/dev/myscript/Widgets
+    ~/dev/myscript/review/Widgets
+    ~/dev/myscript/review2/Widgets
+    ~/dev/myscript/master/MultimodalInputMethod_Android/InputMethodWidgets
+    ~/dev/myscript/master/inputmethodwidgets
+    ~/dev/myscript/master/mmi2/InputMethodWidgets
+  )
+  for REPO in ${REPOS}; do
+    echo ${REPO}:
+    cd ${REPO}
+    $@
+  done
+  cd ${CURRENT_DIR}
+}
 
 if hash qibuild 2>/dev/null;
 then
