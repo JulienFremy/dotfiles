@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/local/sdks/.oh-my-zsh
 
@@ -108,18 +110,18 @@ else
   HAS_QIBUILD=0
 fi
 
-if [ $HAS_QIBUILD == 1 ]
-then
-  function qc {
-    qibuild configure -DQI_WITH_TESTS=OFF $@
-  }
-  function qm {
-    qibuild make $@
-  }
-  function qct {
-    qibuild configure $@
-  }
-fi
+#if [ $HAS_QIBUILD == 1 ]
+#then
+#  function qc {
+#    qibuild configure -DQI_WITH_TESTS=OFF $@
+#  }
+#  function qm {
+#    qibuild make $@
+#  }
+#  function qct {
+#    qibuild configure $@
+#  }
+#fi
 
 function evil_git_dirty {
   [[ $(git diff --shortstat 2> /dev/null | tail -n1) != "" ]] && echo "*"
