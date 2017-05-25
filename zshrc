@@ -1,9 +1,6 @@
 #!/bin/sh
-#echo "aldebaran zshrc profile"TH=$PATH:/usr/lib/ccache/
-# to put my python before mac's python
-PATH=/opt/local/bin:/Users/jfremy/Library/Python/2.7/bin:/usr/local/bin:/Users/jfremy/.local/bin:$PATH
 # allow auto-completion from work dir
-[ -d ~/work ] && cdpath+=~/work
+#[ -d ~/work ] && cdpath+=~/work
 function qp {
   DIR=$( cd "$( dirname "$0" )" && pwd )
   echo $DIR
@@ -16,14 +13,6 @@ function qicd {
     return
   fi
   cd ${p}
-}
-# gradlew C++
-function gc {
-  ./gradlew ndkReleaseBuild
-}
-# gradlew java
-function  gj {
-  ./gradlew compileReleaseJavaWithJavac
 }
 # git push origin -u
 function gpou {
@@ -145,9 +134,6 @@ alias get='git '
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim '
 alias mvim='mvim --noplugin '
 
-# tmux alias
-alias tmuxsource='tmux source-file ~/.tmux.conf'
-
 # prevent iTunes to launch (potentially breaks remote control devices)
 # setting it each time will throw an error, but it's best to keep it here...
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
@@ -158,42 +144,6 @@ setTerminalText () {
   # echo works in bash & zsh
   local mode=$1 ; shift
   echo -ne "\033]$mode;$@\007"
-}
-stt_both  () { setTerminalText 0 $@; }
-stt_tab   () { setTerminalText 1 $@; }
-stt_title () { setTerminalText 2 $@; }
-
-iterm_create_tab () {
-  osascript<<EOD
-  tell application "System Events" to tell process "iTerm" to keystroke "t" using command down
-EOD
-}
-iterm_name_current_tab () {
-  osascript<<EOD
-  tell application "iTerm" to tell session -1 of current terminal to write text "stt_tab $@"
-EOD
-}
-iterm_split_window () {
-  osascript<<EOD
-  tell application "System Events" to tell process "iTerm" to keystroke "d" using command down
-EOD
-}
-iterm_go_to_worktree() {
-  osascript<<EOD
-  tell application "iTerm" to tell session -1 of current terminal to write text "cd $1;qicd $2"
-EOD
-}
-
-set_up_tab () {
-  iterm_create_tab
-  iterm_go_to_worktree $1 $2
-  firstArg=$1
-  firstLetter=${firstArg[1]}
-  tabName="$firstLetter/$2"
-  iterm_name_current_tab $tabName
-  iterm_split_window
-  iterm_go_to_worktree $1 $2
-  iterm_name_current_tab $tabName
 }
 
 # disk usage
