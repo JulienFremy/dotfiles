@@ -1,8 +1,0 @@
-neww -c ~/dev/myscript/Widgets
-splitw -hd -c ~/dev/myscript/Widgets
-neww -c ~/dev/myscript/review/Widgets
-splitw -hd -c ~/dev/myscript/review/Widgets
-neww -c ~/dev/myscript/review2/Widgets
-splitw -hd -c ~/dev/myscript/review2/Widgets
-neww -c ~/dev/myscript/master/inputmethodwidgets
-splitw -hd -c ~/dev/myscript/master/inputmethodwidgets
