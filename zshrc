@@ -196,3 +196,5 @@ set_up_tab () {
   iterm_name_current_tab $tabName
 }
 
+# disk usage
+alias diskusage='du -d 1 -h '
