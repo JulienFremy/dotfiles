@@ -28,19 +28,22 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'user/L9', {'name': 'newL9'}
 "
 
-"Plugin 'xmledit'
-if(has("python3"))
-  Plugin 'Valloric/YouCompleteMe'
-endif
+Plugin 'Valloric/YouCompleteMe'
 "Plugin 'SirVer/ultisnips'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'terryma/vim-expand-region'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 "filetype plugin indent on    " required if vim < 7.4
+
+" Secure options
+set exrc
+set secure
 
 "enable syntax
 syntax on
@@ -71,3 +74,13 @@ vmap <Leader>P "+P
 " Use terryma/vim-expand-region to expand selection
 vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
+
+" Disable question for ycm load of conf file
+" let g:ycm_confirm_extra_conf = 0
+" Path of global ycm conf file
+let g:ycm_global_ycm_extra_conf = "~/vim/.ycm_extra_conf.py"
+
+" Format in NORMAL and VISUAL modes
+map <S-I> :pyf ~/.local/bin/clang-format.py<cr>
+" YCM GoTo
+nnoremap <F2> :YcmCompleter GoTo<cr>
