@@ -83,6 +83,6 @@ vmap V <Plug>(expand_region_shrink)
 let g:ycm_global_ycm_extra_conf = "~/vim/.ycm_extra_conf.py"
 
 " Format in NORMAL and VISUAL modes
-map <S-I> :pyf ~/.local/bin/clang-format.py<cr>
+map <C-S-I> :pyf ~/.local/bin/clang-format.py<cr>
 " YCM GoTo
 nnoremap <F2> :YcmCompleter GoTo<cr>
