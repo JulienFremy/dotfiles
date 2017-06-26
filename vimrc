@@ -28,7 +28,9 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'user/L9', {'name': 'newL9'}
 "
 
-Plugin 'Valloric/YouCompleteMe'
+if has('python') || has('python3')
+  Plugin 'Valloric/YouCompleteMe'
+endif
 "Plugin 'SirVer/ultisnips'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
