@@ -1,7 +1,10 @@
 [credential]
 	helper = osxkeychain
 [tig]
-	main-view = id:yes author:abbreviated date:short commit-title
+        main-view-date = custom
+        main-view-date-format = "%Y-%m-%d %H:%M"
+        main-view = id:yes author:abbreviated date commit-title
+
 [merge]
 	tool = opendiff
 [alias]
