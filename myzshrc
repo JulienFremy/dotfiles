@@ -1,0 +1,3 @@
+
+#remove *.orig from a repo
+alias rm-orig='find . -name "*.orig" -print0 | xargs -0 -p -n 1 rm'
