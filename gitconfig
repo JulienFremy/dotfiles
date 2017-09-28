@@ -15,6 +15,8 @@
         cp = cherry-pick
 ##        branch-hof = for-each-ref --shell --format="printf '\''%%30s %%40s %%25s\n'\'' %(authorname) %(refname:short) %(committerdate:relative)" --sort=committerdate refs/remotes/origin
         fa = fetch --all -p
+# list branches
+        lb = for-each-ref --count 6 --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 
 [filter "lfs"]
 	clean = git-lfs clean %f
