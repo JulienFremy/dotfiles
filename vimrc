@@ -93,3 +93,13 @@ nnoremap <M-b> :YcmCompleter GoTo<cr>
 " Fuzzy file find
 nnoremap <C-k> :FZF<cr>
 
+" Clang format
+function! ClangFormatFile()
+  let l:lines="all"
+  pyf ~/.local/share/clang/clang-format.py
+endfunction
+autocmd BufWritePre *.cpp,*.h,*.c call ClangFormatFile()
+
+map <C-I> :pyf ~/.local/share/clang/clang-format.py<cr>
+imap <C-I> <c-o>:pyf ~/.local/share/clang/clang-format.py<cr>
+
