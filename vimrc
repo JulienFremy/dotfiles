@@ -93,6 +93,15 @@ nnoremap <M-b> :YcmCompleter GoTo<cr>
 " Fuzzy file find
 nnoremap <C-k> :FZF<cr>
 
+" Function to open NERDTree on startup
+function! StartUp()                                                                                                                                                                                         
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+" Actual command call
+autocmd VimEnter * call StartUp()
+
 " Clang format
 function! ClangFormatFile()
   let l:lines="all"
