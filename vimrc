@@ -112,3 +112,7 @@ autocmd BufWritePre *.cpp,*.h,*.c call ClangFormatFile()
 map <C-I> :pyf ~/.local/share/clang/clang-format.py<cr>
 imap <C-I> <c-o>:pyf ~/.local/share/clang/clang-format.py<cr>
 
+" Remove trailing whitespaces on save
+autocmd BufWritePre *.py :%s/\s\+$//e
+
+
