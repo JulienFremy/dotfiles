@@ -90,3 +90,6 @@ let g:ycm_global_ycm_extra_conf = "~/vim/.ycm_extra_conf.py"
 map <C-S-I> :pyf ~/.local/bin/clang-format.py<cr>
 " YCM GoTo
 nnoremap <M-b> :YcmCompleter GoTo<cr>
+" Fuzzy file find
+nnoremap <C-k> :FZF<cr>
+
