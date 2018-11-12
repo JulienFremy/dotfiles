@@ -2,6 +2,9 @@ set nocompatible              " be iMproved, required
 "filetype off                  " required if vim < 7.4
 set t_Co=256
 
+let g:python3_host_prog=$HOME.'/local/virtualenvs/neovim3/bin/python3'
+let g:python_host_prog=$HOME.'/local/virtualenvs/neovim/bin/python'
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/local/vim/Vundle.vim
 "call vundle#begin()
