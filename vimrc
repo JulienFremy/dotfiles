@@ -41,6 +41,7 @@ Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'terryma/vim-expand-region'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlp.vim'
+Plugin 'junegunn/fzf', {'rtp': 'plugin/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
