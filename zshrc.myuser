@@ -4,3 +4,13 @@ alias rm-orig='find . -name "*.orig" -print0 | xargs -0 -p -n 1 rm'
 #ctest with output on failure
 alias ctestof='ctest --output-on-failure '
 
+#list file by size
+alias lfs='du -a . | sort -n -r | head -1000'
+
+#fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#git cherry-pick from other repo
+function gitcp {
+  git --git-dir=$1 format-patch -k -1 --stdout $2 | git am -3 -k
+}
