@@ -94,8 +94,8 @@ nnoremap <M-b> :YcmCompleter GoTo<cr>
 nnoremap <C-k> :FZF<cr>
 
 " Function to open NERDTree on startup
-function! StartUp()                                                                                                                                                                                         
-    if 0 == argc()
+function! StartUp()
+if 0 == argc()
         NERDTree
     end
 endfunction
