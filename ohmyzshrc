@@ -226,6 +226,33 @@ alias gx='gitx --all '
 alias gg='git gui&'
 alias gr='git rebase '
 alias gri='git rebase -i '
+alias gria='git rebase -i --autosquash '
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+#launch a new Qt Creator
+alias qtcreator482='/Users/jfremy/app/Qt\ Creator\ 4.8.2/Qt\ creator.app/Contents/MacOS/Qt\ Creator > /dev/null 2>&1 &!'
+#launch a Qt Creator
+#launch a Qt Creator
+alias qtcreator=qtcreator482
+
+#path extension for Qt
+export PATH=$PATH:/Users/jfremy/sdks/Qt/5.12.2/clang_64/bin
+#path extension for Python
+export PATH=$PATH:/Users/jfremy/Library/Python/2.7/bin
 
 # path default
 source $ZSH/oh-my-zsh.sh
+
+# git cherry-pick from another repo
+# usage: gitcp <path> <commit>
+# example: gitcp ~/dev/myscript/sdk1/sdk HEAD
+function gitcp {
+  git --git-dir=$1/.git format-patch -k -1 --stdout $2 | git am -3 -k
+}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
