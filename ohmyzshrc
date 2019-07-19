@@ -255,7 +255,7 @@ function gitcp {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(pyenv init -)"
+[ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
