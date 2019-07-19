@@ -117,3 +117,19 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 
 autocmd FileType python setlocal tabstop=2 shiftwidth=2 softtabstop=0 expandtab smarttab
 autocmd FileType txt setlocal tabstop=2 shiftwidth=2 softtabstop=0 expandtab smarttab
+
+autocmd FileType rust setlocal tabstop=2
+autocmd FileType rust setlocal softtabstop=2
+autocmd FileType rust setlocal expandtab
+autocmd FileType rust setlocal shiftwidth=2
+autocmd FileType rust setlocal smarttab
+
+autocmd FileType dart setlocal tabstop=2
+autocmd FileType dart setlocal softtabstop=2
+autocmd FileType dart setlocal expandtab
+autocmd FileType dart setlocal shiftwidth=2
+autocmd FileType dart setlocal smarttab
+
+map <C-n> :NERDTreeToggle<CR>
+
+
