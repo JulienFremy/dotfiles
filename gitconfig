@@ -31,5 +31,5 @@
 [core]
 	hooksPath = /Users/jfremy/dev/myscript/git-hooks/hooks
 	attributesFile = /Users/jfremy/dev/myscript/git-hooks/info/attributes
-[hooks]
+[hooks "pre-commit"]
 	validEmailDomain = myscript.com
