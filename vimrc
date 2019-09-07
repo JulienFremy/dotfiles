@@ -31,21 +31,21 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'user/L9', {'name': 'newL9'}
 "
 
-if has('python') || has('python3')
-  Plugin 'Valloric/YouCompleteMe'
-endif
+"if has('python') || has('python3')
+"  Plugin 'Valloric/YouCompleteMe'
+"endif
 "Plugin 'SirVer/ultisnips'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'artur-shaik/vim-javacomplete2'
-Plugin 'terryma/vim-expand-region'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'artur-shaik/vim-javacomplete2'
+"Plugin 'terryma/vim-expand-region'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlp.vim'
 Plugin 'junegunn/fzf', {'rtp': 'plugin/'}
 
-" All of your Plugins must be added before the following line
+
 call vundle#end()            " required
-"filetype plugin indent on    " required if vim < 7.4
+
 
 " Secure options
 set exrc
@@ -107,7 +107,7 @@ function! ClangFormatFile()
   let l:lines="all"
   pyf ~/.local/share/clang/clang-format.py
 endfunction
-autocmd BufWritePre *.cpp,*.h,*.c call ClangFormatFile()
+" autocmd BufWritePre *.cpp,*.h,*.c call ClangFormatFile()
 
 map <C-I> :pyf ~/.local/share/clang/clang-format.py<cr>
 imap <C-I> <c-o>:pyf ~/.local/share/clang/clang-format.py<cr>
@@ -129,6 +129,12 @@ autocmd FileType dart setlocal softtabstop=2
 autocmd FileType dart setlocal expandtab
 autocmd FileType dart setlocal shiftwidth=2
 autocmd FileType dart setlocal smarttab
+
+autocmd FileType c setlocal tabstop=2
+autocmd FileType c setlocal softtabstop=2
+autocmd FileType c setlocal expandtab
+autocmd FileType c setlocal shiftwidth=2
+autocmd FileType c setlocal smarttab
 
 map <C-n> :NERDTreeToggle<CR>
 
