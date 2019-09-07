@@ -255,6 +255,9 @@ function gitcp {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# add rust stuff to PATH
+[ -d "$HOME/.cargo/bin" ] && export PATH=$PATH:$HOME/.cargo/bin
+
 [ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)"
 
 export LANG=en_US.UTF-8
