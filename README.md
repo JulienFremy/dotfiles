@@ -13,6 +13,11 @@ is far better.
 iTerm shortcuts
 ===============
 
+First, you need to go in Preferences/Keys/Navigation Shortcuts
+and select "No Shortcut" for both
+"Shortcut to activate a window" and "Shortcut to select a tab"
+
+Then, in Preferences/Keys/Key Bindings add the following shortcuts:
 Cmd+1: Send Hex Codes: 0x1 0x31
 Cmd+2: Send Hex Codes: 0x1 0x32
 ... and so on and so forth
