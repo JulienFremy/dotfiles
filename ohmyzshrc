@@ -236,7 +236,9 @@ export EDITOR="$VISUAL"
 alias qtcreator482='/Users/jfremy/app/Qt\ Creator\ 4.8.2/Qt\ creator.app/Contents/MacOS/Qt\ Creator > /dev/null 2>&1 &!'
 alias qtcreator491='/Users/jfremy/app/Qt\ Creator\ 4.9.1/Qt\ creator.app/Contents/MacOS/Qt\ Creator > /dev/null 2>&1 &!'
 alias qtcreator492='/Users/jfremy/app/Qt\ Creator\ 4.9.2/Qt\ creator.app/Contents/MacOS/Qt\ Creator > /dev/null 2>&1 &!'
-alias qtcreator=qtcreator492
+alias qtcreator4101='/Users/jfremy/app/Qt\ Creator\ 4.10.1/Qt\ creator.app/Contents/MacOS/Qt\ Creator > /dev/null 2>&1 &!'
+alias qtcreator4102='/Users/jfremy/app/Qt\ Creator\ 4.10.2/Qt\ creator.app/Contents/MacOS/Qt\ Creator > /dev/null 2>&1 &!'
+alias qtcreator=qtcreator4102
 
 #path extension for Qt
 export PATH=$PATH:/Users/jfremy/sdks/Qt/5.12.2/clang_64/bin
