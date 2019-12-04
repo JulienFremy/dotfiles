@@ -1,5 +1,3 @@
-[credential]
-	helper = osxkeychain
 [tig]
         main-view-date = custom
         main-view-date-format = "%Y-%m-%d %H:%M"
@@ -33,3 +31,11 @@
 	attributesFile = /Users/jfremy/dev/myscript/git-hooks/info/attributes
 [hooks "pre-commit"]
 	validEmailDomain = myscript.com
+# credential vary according to the platform so add a small git config file
+# in $HOME 
+# on mac:
+# [credential]
+#        helper = osxkeychain
+# on linux:
+# [credential]
+#        helper = libsecret
