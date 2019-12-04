@@ -260,7 +260,8 @@ function gitcp {
 # add rust stuff to PATH
 [ -d "$HOME/.cargo/bin" ] && export PATH=$PATH:$HOME/.cargo/bin
 
-[ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)"
+# pyenv stuff
+[ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
