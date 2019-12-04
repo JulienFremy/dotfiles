@@ -25,6 +25,12 @@ Cmd+1: Send Hex Codes: 0x1 0x31
 Cmd+2: Send Hex Codes: 0x1 0x32
 ... and so on and so forth
 
+Alt-nav
+-------
+
+In Preferences/Profiles/Keys, select Alt+-> and choose send escape sequence f
+and select Alt+<- and chose send escape sequence b
+
 TODO
 ====
 
