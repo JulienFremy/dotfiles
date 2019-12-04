@@ -5,15 +5,13 @@ set t_Co=256
 let g:python3_host_prog=$HOME.'/local/virtualenvs/neovim3/bin/python3'
 let g:python_host_prog=$HOME.'/local/virtualenvs/neovim/bin/python'
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/local/vim/Vundle.vim
-"call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-call vundle#begin('~/local/vim/')
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
+call plug#begin('~/.vim/plugged')
 "" The following are examples of different formats supported.
 "" Keep Plugin commands between vundle#begin/end.
 "" plugin on GitHub repo
@@ -30,22 +28,20 @@ Plugin 'gmarik/Vundle.vim'
 "" Avoid a name conflict with L9
 "Plugin 'user/L9', {'name': 'newL9'}
 "
-
-"if has('python') || has('python3')
-"  Plugin 'Valloric/YouCompleteMe'
-"endif
+if has('python') || has('python3')
+  Plug 'Valloric/YouCompleteMe'
+endif
 "Plugin 'SirVer/ultisnips'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'artur-shaik/vim-javacomplete2'
-"Plugin 'terryma/vim-expand-region'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlp.vim'
-Plugin 'junegunn/fzf', {'rtp': 'plugin/'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'terryma/vim-expand-region'
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', {'rtp': 'plugin/'}
 
-
-call vundle#end()            " required
-
+" All of your Plugins must be added before the following line
+call plug#end()            " required
+"filetype plugin indent on    " required if vim < 7.4
 
 " Secure options
 set exrc
