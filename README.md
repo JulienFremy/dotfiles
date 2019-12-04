@@ -20,7 +20,7 @@ Cmd+2: Send Hex Codes: 0x1 0x32
 TODO
 ====
 
-A script that:
+A script that (but before test dotfiles (check Pocket link)):
 
 -symlinks ohmyzshrc to ~/.zshrc
 -symlinks prompt/my_theme.zsh-theme to ~/.ohmyzshrc/themes
