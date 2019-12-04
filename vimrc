@@ -28,9 +28,9 @@ call plug#begin('~/.vim/plugged')
 "" Avoid a name conflict with L9
 "Plugin 'user/L9', {'name': 'newL9'}
 "
-if has('python') || has('python3')
-  Plug 'Valloric/YouCompleteMe'
-endif
+"if has('python') || has('python3')
+"  Plug 'Valloric/YouCompleteMe'
+"endif
 "Plugin 'SirVer/ultisnips'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
