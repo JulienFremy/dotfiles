@@ -13,6 +13,9 @@ is far better.
 iTerm shortcuts
 ===============
 
+Cmd+n to select tmux tabs
+-------------------------
+
 First, you need to go in Preferences/Keys/Navigation Shortcuts
 and select "No Shortcut" for both
 "Shortcut to activate a window" and "Shortcut to select a tab"
