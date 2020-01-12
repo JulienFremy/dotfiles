@@ -134,4 +134,6 @@ autocmd FileType c setlocal smarttab
 
 map <C-n> :NERDTreeToggle<CR>
 
+set backspace=indent,eol,start
+
 
