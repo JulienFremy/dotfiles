@@ -273,3 +273,6 @@ function test_sdk {
   gtest-parallel $1/edk/c/test/MyScriptKeyboard/edk_c_test-MyScriptKeyboard
   gtest-parallel $1/edk/c/test/MyScriptText/edk_c_test-MyScriptText
 }
+
+# fix git completion
+zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-completion.bash
