@@ -266,7 +266,7 @@ function gitcp {
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-function test {
+function test_sdk {
   cd $1
   ninja
   cd ..
