@@ -25,12 +25,7 @@
 
 [user]
     name = Julien Frémy
-    email = julien.fremy@myscript.com
-[core]
-	hooksPath = /Users/jfremy/dev/myscript/git-hooks/hooks
-	attributesFile = /Users/jfremy/dev/myscript/git-hooks/info/attributes
-[hooks "pre-commit"]
-	validEmailDomain = myscript.com
+    email = julien.fremy@magicplan.app
 # credential vary according to the platform so add a small git config file
 # in $HOME 
 # on mac:
