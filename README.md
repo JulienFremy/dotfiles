@@ -37,6 +37,6 @@ TODO
 A script that (but before test dotfiles (check Pocket link)):
 
 -symlinks ohmyzshrc to ~/.zshrc
--symlinks prompt/my_theme.zsh-theme to ~/.ohmyzshrc/themes
+-symlinks prompt/my_theme.zsh-theme to ~/.oh-my-zsh/themes/my_theme.zsh-theme
 -symlink other stuff
 
