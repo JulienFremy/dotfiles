@@ -19,9 +19,10 @@
 	branch-hof = "!git for-each-ref --shell --format=\"if [ %(authorname) = atlbitbucket ]; then authorname=\\\"\\$(git show -s --format=%aN %(refname:short)~1)\\\"; committerdate=\\\"\\$(git show -s --format=%cr %(refname:short)~1)\\\"; else authorname=%(authorname); committerdate=%(committerdate:relative); fi; printf \\\"%%-25s %%-50s %%25s\\n\\\" \\\"\\$authorname\\\" %(refname:short) \\\"\\$committerdate\\\"\" refs/remotes/origin | sh | sort"
 
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 
 [user]
     name = Julien Frémy
