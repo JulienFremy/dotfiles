@@ -261,7 +261,7 @@ function gitcp {
 [ -d "$HOME/.cargo/bin" ] && export PATH=$PATH:$HOME/.cargo/bin
 
 # pyenv stuff
-[ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"
+[ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)" && eval "$(pyenv init -)"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
