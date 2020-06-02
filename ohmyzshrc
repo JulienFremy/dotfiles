@@ -260,6 +260,9 @@ function gitcp {
 # add rust stuff to PATH
 [ -d "$HOME/.cargo/bin" ] && export PATH=$PATH:$HOME/.cargo/bin
 
+# Add Visual Studio Code (code)
+export PATH=$PATH:"$HOME/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # pyenv stuff
 [ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)" && eval "$(pyenv init -)"
 
