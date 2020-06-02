@@ -11,7 +11,7 @@
         sup = submodule update
         supr = submodule update --init --recursive
         cp = cherry-pick
-        fa = fetch --all -p
+        fa = fetch --all --prune
 # list branches
         lb = for-each-ref --count 6 --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
         lb-all = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
