@@ -1,3 +1,10 @@
+TODO at each install (try to automate this, check TODO)
+=======================================================
+
+- link files
+- install fzf
+- install ag
+
 Notes
 =====
 
