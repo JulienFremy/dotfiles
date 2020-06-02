@@ -273,3 +273,6 @@ export LC_ALL=en_US.UTF-8
 zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-completion.bash
 
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
+[ -f ~/.magicplan.zsh ] && source ~/.magicplan.zsh
+
