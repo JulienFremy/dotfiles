@@ -13,7 +13,7 @@
         cp = cherry-pick
         fa = fetch --all --prune
 # list branches
-        lb = for-each-ref --count 6 --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+        lb = for-each-ref --count 25 --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
         lb-all = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
         cm = commit
 	branch-hof = "!git for-each-ref --shell --format=\"if [ %(authorname) = atlbitbucket ]; then authorname=\\\"\\$(git show -s --format=%aN %(refname:short)~1)\\\"; committerdate=\\\"\\$(git show -s --format=%cr %(refname:short)~1)\\\"; else authorname=%(authorname); committerdate=%(committerdate:relative); fi; printf \\\"%%-25s %%-50s %%25s\\n\\\" \\\"\\$authorname\\\" %(refname:short) \\\"\\$committerdate\\\"\" refs/remotes/origin | sh | sort"
