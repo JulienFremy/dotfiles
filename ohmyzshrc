@@ -276,3 +276,14 @@ zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-compl
 
 [ -f ~/.magicplan.zsh ] && source ~/.magicplan.zsh
 
+# git fuzzy checkout
+function gfuco {
+  matching_branches=$(git lb | grep "$1")
+  matching_branch=$(awk '{print $1}' <<< $matching_branches | head -1)
+  if [ ! -z "$matching_branch" ]; then
+    git co "$matching_branch"
+  else
+    echo "no branch matching pattern $1"
+  fi
+}
+
