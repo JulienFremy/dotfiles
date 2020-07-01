@@ -126,7 +126,7 @@ function gpf {
   if [ "$branch_name" = master ]; then
     echo "No gpf for master!"
   else
-    git push --force-with-lease origin $(git rev-parse --abbrev-ref HEAD)
+    git push --force-with-lease origin "$branch_name"
   fi
 }
 # use a command in all repos
