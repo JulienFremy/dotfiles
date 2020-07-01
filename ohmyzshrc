@@ -122,7 +122,12 @@ function gpou {
 }
 # git push -f current branch
 function gpf {
-  git push --force-with-lease origin $(git rev-parse --abbrev-ref HEAD)
+  branch_name=$(git rev-parse --abbrev-ref HEAD)
+  if [ "$branch_name" = master ]; then
+    echo "No gpf for master!"
+  else
+    git push --force-with-lease origin $(git rev-parse --abbrev-ref HEAD)
+  fi
 }
 # use a command in all repos
 #function all_repos {
