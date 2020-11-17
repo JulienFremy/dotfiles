@@ -28,5 +28,37 @@
         "key": "shift+cmd+j",
         "command": "-workbench.action.search.toggleQueryDetails",
         "when": "searchViewletVisible"
-    }
+    },
+    {
+      "key": "cmd+r",
+      "command": "workbench.action.debug.start",
+      "when": "!inDebugMode"
+    },
+    {
+      "key": "cmd+r",
+      "command": "workbench.action.debug.stop",
+      "when": "inDebugMode"
+    },
+    {
+      "key": "cmd+0",
+      "command": "-workbench.action.focusSideBar"
+    },
+    {
+      "key": "cmd+b",
+      "command": "cmake.build",
+      "when": "cmake:enableFullFeatureSet"
+    },
+    {
+      "key": "shift+f7",
+      "command": "-cmake.buildWithTarget",
+      "when": "cmake:enableFullFeatureSet"
+    },
+    {
+      "key": "cmd+0",
+      "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "cmd+b",
+      "command": "-workbench.action.toggleSidebarVisibility"
+    },
 ]
